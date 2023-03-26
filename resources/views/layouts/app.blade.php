@@ -9,6 +9,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="shortcut icon" href="https://laravel.com/img/favicon/favicon-32x32.png" type="image/x-icon">
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,14 +30,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="gap-2 navbar-nav ms-md-auto">
                     <li class="nav-item">
-                        <a class="nav-link {{ ($title === 'Home') ? "fw-semibold active" : "" }}" href="#">Home</a>
+                        <a class="nav-link {{ ($title === 'Home') ? "fw-semibold active" : "" }}" href="{{ route('anggota.index') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#tools">Tools</a>
+                        <a class="nav-link {{ ($title === 'Tambah Data') ? "fw-semibold active" : "" }}" href="{{ route('anggota.create') }}">Tambah Data</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            {{Auth::user()->name }}
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{Auth::user()->name }}
                         </a>
                         <ul class="dropdown-menu">
                           <li><p class="dropdown-item" href="#">{{Auth::user()->name }}<br><small class="text-capitalize">({{Auth::user()->role->name }})</small></p></li>

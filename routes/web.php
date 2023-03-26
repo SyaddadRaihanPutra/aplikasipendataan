@@ -22,6 +22,7 @@ Route::get('/', function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('anggota', [StudentsController::class, 'index'])->name('anggota.index');
+    Route::get('anggota/{id}', [StudentsController::class, 'show'])->name('anggota.show');
     Route::get('anggota/create', [StudentsController::class, 'create'])->name('anggota.create');
     Route::post('anggota/store', [StudentsController::class, 'store'])->name('anggota.store');
     Route::get('anggota/edit/{id}', [StudentsController::class, 'edit'])->name('anggota.edit');

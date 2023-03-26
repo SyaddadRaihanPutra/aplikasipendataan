@@ -17,7 +17,8 @@ class StudentsController extends Controller
 
     public function create()
     {
-        return view('anggota.create');
+        $title = 'Tambah Data';
+        return view('anggota.create', compact('title'));
     }
 
     public function store(Request $request)
