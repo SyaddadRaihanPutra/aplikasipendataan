@@ -23,6 +23,7 @@
                 <td>Jurusan</td>
                 <td>Email</td>
                 <td>Jenis Kelamin</td>
+                <td>Tanggal Daftar</td>
                 <td style="width: 15rem;">Aksi</td>
             </thead>
             <tbody>
@@ -34,6 +35,7 @@
                         <td>{{ $data->jurusan }}</td>
                         <td>{{ $data->email }}</td>
                         <td>{{ $data->jenis_kelamin }}</td>
+                        <td>{{ $data->created_at->format('d-m-Y') }}</td>
                         <td class="justify-content-center gap-3 d-flex">
                             <button type="button" class="btn btn-warning btn-sm fw-semibold" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">
