@@ -36,7 +36,7 @@
                         <a class="nav-link {{ ($title === 'Tambah Data') ? "fw-semibold active" : "" }}" href="{{ route('anggota.create') }}">Tambah Data</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img class="rounded-5 border-primary border border-1" width="30" src="https://www.its.ac.id/international/wp-content/uploads/sites/66/2020/02/blank-profile-picture-973460_1280.jpg" alt="">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img class="rounded-5 border-primary border border-1" width="30" src="https://www.its.ac.id/international/wp-content/uploads/sites/66/2020/02/blank-profile-picture-973460_1280.jpg" alt=""> 
                         </a>
                         <ul class="dropdown-menu">
                           <li><p class="dropdown-item cursor-pointer" href="#">{{Auth::user()->name }}<br><small class="text-capitalize">({{Auth::user()->role->name }})</small></p></li>
