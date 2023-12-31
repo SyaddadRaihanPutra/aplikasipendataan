@@ -5,9 +5,6 @@
         <div class="container">
             <h4 class=" fw-semibold">Data Anggota</h4>
             <form class="d-flex">
-                <input class="form-control me-2" type="search" id="search" placeholder="Cari Data" aria-label="Search"
-                    style="background-color: #eaeaea">
-                <div id="search_list"></div>
                 <a href="{{ route('anggota.create') }}" class="btn btn-success text-nowrap">Tambah Data</a>
             </form>
         </div>
@@ -48,20 +45,20 @@
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Anggota</h1>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>
                                         </div>
 
                                         <div class="modal-body">
                                             <ul>
-                                                <li>Nama: </li>
-                                                <li>Kelas: </li>
-                                                <li>Jurusan: </li>
-                                                <li>Email: </li>
-                                                <li>Jenis Kelamin: </li>
-                                                <li>No. Telepon: </li>
-                                                <li>Tanggal Lahir: </li>
+                                                <li>Nama: {{ $data->nama }}</li>
+                                                <li>Kelas: {{ $data->kelas }}</li>
+                                                <li>Jurusan: {{ $data->jurusan }}</li>
+                                                <li>Email: {{ $data->email }}</li>
+                                                <li>Jenis Kelamin: {{ $data->jenis_kelamin }}</li>
+                                                <li>No. Telepon: {{ $data->no_hp }}</li>
+                                                <li>Tanggal Lahir: {{ $data->tgl_lahir }}</li>
                                             </ul>
                                         </div>
                                         <div class="modal-footer">
