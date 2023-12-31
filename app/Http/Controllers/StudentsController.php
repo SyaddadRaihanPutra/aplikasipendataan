@@ -17,7 +17,8 @@ class StudentsController extends Controller
 
     public function create()
     {
-        return view('anggota.create');
+        $title = 'Tambah Data';
+        return view('anggota.create', compact('title'));
     }
 
     public function store(Request $request)
@@ -41,7 +42,7 @@ class StudentsController extends Controller
     {
         $student = Student::find($id);
         return view('anggota.edit', compact('student'));
-        dd($student);
+        // dd($student);
     }
 
     public function update(Request $request, $id)
